@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cardápio Digital - Padaria [Nome da Padaria]</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&family=Playfair+Display:wght@700&display=swap" rel="stylesheet">
+</head>
+<body>
+
+    <header>
+        <h1 class="logo">Padaria Moca</h1>
+        <div class="cart-icon" id="cart-icon">
+            🛒 <span id="cart-count">0</span>
+        </div>
+    </header>
+
+    <div class="container">
+        <aside class="sidebar" id="cart-sidebar">
+            <h2>Seu Pedido <button class="close-sidebar-btn">&times;</button></h2>
+            <div id="cart-items">
+                <p class="empty-cart-message">O seu carrinho está vazio.</p>
+            </div>
+            <div class="cart-total">
+                <p>Total: R$ <span id="cart-total-price">0.00</span></p>
+            </div>
+            <a href="#" class="checkout-button">Finalizar Pedido</a>
+        </aside>
+
+        <main class="menu">
+            <section id="paes-salgados" class="category">
+                <h2>Pães e Salgados</h2>
+                <div class="item-grid">
+                    <div class="item" data-name="Pão de Queijo" data-price="5.00">
+                        <img src="img/paes.jpg" alt="Pão de Queijo">
+                        <h3>Pão de Queijo</h3>
+                        <p class="item-price">R$ 5,00</p>
+                        <button class="add-to-cart-btn">Adicionar</button>
+                    </div>
+                    
+                    <div class="item" data-name="Coxinha de Frango" data-price="8.50">
+                        <img src="img/paes.jpg" alt="Coxinha de Frango">
+                        <h3>Coxinha de Frango</h3>
+                        <p class="item-price">R$ 8,50</p>
+                        <button class="add-to-cart-btn">Adicionar</button>
+                    </div>
+                </div>
+            </section>
+
+            <section id="doces-bolos" class="category">
+                <h2>Doces e Bolos</h2>
+                <div class="item-grid">
+                    <div class="item" data-name="Bolo de Cenoura" data-price="12.00">
+                        <img src="img/paes.jpg" alt="Bolo de Cenoura">
+                        <h3>Bolo de Cenoura</h3>
+                        <p class="item-price">R$ 12,00</p>
+                        <button class="add-to-cart-btn">Adicionar</button>
+                    </div>
+                    
+                    <div class="item" data-name="Brigadeiro" data-price="3.50">
+                        <img src="img/paes.jpg" alt="Brigadeiro">
+                        <h3>Brigadeiro</h3>
+                        <p class="item-price">R$ 3,50</p>
+                        <button class="add-to-cart-btn">Adicionar</button>
+                    </div>
+                </div>
+            </section>
+
+        </main>
+    </div>
+
+    <script src="script.js" defer></script>
+</body>
+</html>

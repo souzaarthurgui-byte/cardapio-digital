@@ -1,0 +1,170 @@
+:root {
+    --primary-color: #5C4033;
+    --accent-color: #FFC000;
+    --text-color: #FFFFFF;
+    --background-color: #F5F5F5;
+}
+
+body {
+    font-family: 'Montserrat', sans-serif;
+    background-color: var(--background-color);
+    margin: 0;
+    color: var(--primary-color);
+}
+
+.painel-header {
+    background-color: var(--primary-color);
+    color: var(--text-color);
+    padding: 1rem 2rem;
+    text-align: center;
+}
+
+.logo {
+    font-family: 'Playfair Display', serif;
+    font-size: 1.8rem;
+    margin: 0;
+}
+
+.painel-container {
+    padding: 2rem;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+#no-orders-message {
+    text-align: center;
+    color: #888;
+    margin-top: 4rem;
+    font-size: 1.2rem;
+}
+
+.status-columns {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 2rem;
+    margin-top: 1rem;
+}
+
+.status-column {
+    background-color: #e0e0e0;
+    padding: 1rem;
+    border-radius: 10px;
+}
+
+.status-title {
+    font-family: 'Playfair Display', serif;
+    font-size: 1.5rem;
+    color: var(--primary-color);
+    border-bottom: 2px solid var(--accent-color);
+    padding-bottom: 0.5rem;
+    margin-bottom: 1.5rem;
+    text-align: center;
+}
+
+.orders-list {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+}
+
+.order-card {
+    background-color: var(--text-color);
+    padding: 1rem;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.card-content {
+    flex-grow: 1;
+}
+
+.card-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 0.5rem;
+}
+
+.order-card h3 {
+    margin: 0;
+    font-family: 'Playfair Display', serif;
+    font-size: 1.2rem;
+    color: var(--primary-color);
+}
+
+.status-badge {
+    padding: 0.3rem 0.6rem;
+    border-radius: 15px;
+    color: white;
+    font-weight: bold;
+    font-size: 0.7rem;
+}
+
+.status-novo { background-color: #337ab7; }
+.status-em-preparacao { background-color: #f0ad4e; }
+.status-pronto { background-color: #5cb85c; }
+
+.customer-name {
+    margin: 0.5rem 0;
+    font-size: 0.9rem;
+    color: #555;
+}
+
+.order-total {
+    font-weight: bold;
+    font-size: 1rem;
+    text-align: right;
+    margin-top: 0.5rem;
+}
+
+.card-actions {
+    display: flex;
+    justify-content: space-between;
+    gap: 10px;
+    margin-top: 1rem;
+}
+
+.status-button, .details-button {
+    flex-grow: 1;
+    padding: 0.6rem;
+    border: none;
+    border-radius: 50px;
+    background-color: var(--primary-color);
+    color: var(--text-color);
+    cursor: pointer;
+    font-weight: bold;
+    transition: background-color 0.3s;
+    font-size: 0.8rem;
+}
+
+.details-button {
+    background-color: #777;
+}
+
+.details-button:hover {
+    background-color: #555;
+}
+
+.item-details {
+    margin-top: 1rem;
+    padding-top: 1rem;
+    border-top: 1px dashed #ccc;
+}
+
+.details-title {
+    font-weight: bold;
+    margin-bottom: 0.5rem;
+}
+
+.item-details ul {
+    list-style-type: disc;
+    padding-left: 20px;
+    margin: 0;
+}
+
+.hidden {
+    display: none;
+}

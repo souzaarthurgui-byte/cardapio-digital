@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pedido Confirmado!</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="checkout.css">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&family=Playfair+Display:wght@700&display=swap" rel="stylesheet">
+</head>
+<body>
+
+    <header>
+        <h1 class="logo">Padaria Moca</h1>
+    </header>
+
+    <div class="checkout-container">
+        <main class="checkout-main">
+            <h2 class="success-message">🎉 Pedido Enviado com Sucesso!</h2>
+            <p>Seu pedido foi recebido e a nossa equipe já está preparando.</p>
+
+            <div class="order-details-container">
+                <h3>Detalhes do Pedido</h3>
+                <p><strong>Mesa:</strong> <span id="mesa-confirmacao"></span></p>
+                <p><strong>Nome:</strong> <span id="nome-confirmacao">Não informado</span></p>
+                <p><strong>Observações:</strong> <span id="obs-confirmacao">Nenhuma</span></p>
+            </div>
+
+            <div class="order-summary">
+                <h3>Resumo do seu Pedido</h3>
+                <ul id="summary-items-confirmacao">
+                    </ul>
+                <div class="order-total">
+                    <p>Total: R$ <span id="summary-total-price-confirmacao">0.00</span></p>
+                </div>
+            </div>
+            
+            <a href="index.html" class="submit-button">Voltar ao Cardápio</a>
+        </main>
+    </div>
+
+    <script src="confirmacao.js" defer></script>
+</body>
+</html>

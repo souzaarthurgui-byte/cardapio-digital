@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Painel de Pedidos</title>
+    <link rel="stylesheet" href="painel.css">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&family=Playfair+Display:wght@700&display=swap" rel="stylesheet">
+</head>
+<body>
+
+    <header class="painel-header">
+        <h1 class="logo">Painel de Pedidos - Padaria Moca</h1>
+    </header>
+
+    <div class="painel-container">
+        <p id="no-orders-message">Nenhum pedido novo no momento.</p>
+        <div class="status-columns">
+            <div class="status-column">
+                <h2 class="status-title">Novos Pedidos</h2>
+                <div id="new-orders" class="orders-list"></div>
+            </div>
+            <div class="status-column">
+                <h2 class="status-title">Em Preparação</h2>
+                <div id="in-preparation-orders" class="orders-list"></div>
+            </div>
+            <div class="status-column">
+                <h2 class="status-title">Pronto para Retirada</h2>
+                <div id="ready-orders" class="orders-list"></div>
+            </div>
+        </div>
+    </div>
+
+    <script src="painel.js" defer></script>
+</body>
+</html>

@@ -1,0 +1,156 @@
+/* --- Variaveis de Cores --- */
+:root {
+    --primary-color: #5C4033; /* Marrom Escuro */
+    --accent-color: #FFC000;  /* Amarelo Mostarda */
+    --text-color: #FFFFFF;
+    --background-color: #F5F5F5; /* Branco */
+}
+
+/* --- Estilos Gerais --- */
+body {
+    font-family: 'Montserrat', sans-serif;
+    background-color: var(--background-color);
+    margin: 0;
+    color: var(--primary-color);
+}
+
+header {
+    background-color: var(--primary-color);
+    color: var(--text-color);
+    padding: 1rem 2rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.logo {
+    font-family: 'Playfair Display', serif;
+    font-size: 1.8rem;
+    margin: 0;
+}
+
+/* --- Container e Seções do Checkout --- */
+.checkout-container {
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    padding: 2rem;
+}
+
+.checkout-main {
+    width: 100%;
+    max-width: 600px;
+    background-color: var(--text-color);
+    padding: 2rem;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+}
+
+h2 {
+    font-family: 'Playfair Display', serif;
+    font-size: 2rem;
+    border-bottom: 2px solid var(--accent-color);
+    padding-bottom: 0.5rem;
+    margin-bottom: 1.5rem;
+}
+
+h3 {
+    color: var(--primary-color);
+    margin-top: 0;
+}
+
+/* --- Resumo do Pedido --- */
+.order-summary {
+    margin-bottom: 2rem;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    padding: 1.5rem;
+}
+
+#summary-items {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+#summary-items li {
+    padding: 0.5rem 0;
+    border-bottom: 1px dashed #eee;
+}
+
+#summary-items li:last-child {
+    border-bottom: none;
+}
+
+.order-total {
+    font-size: 1.5rem;
+    font-weight: bold;
+    margin-top: 1rem;
+    text-align: right;
+    color: var(--accent-color);
+}
+
+/* --- Formulário --- */
+.order-form .form-group {
+    margin-bottom: 1.5rem;
+}
+
+.order-form label {
+    display: block;
+    font-weight: bold;
+    margin-bottom: 0.5rem;
+}
+
+.order-form input[type="number"],
+.order-form input[type="text"],
+.order-form textarea {
+    width: 100%;
+    padding: 0.8rem;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    box-sizing: border-box; /* Garante que o padding não aumente a largura */
+    font-family: 'Montserrat', sans-serif;
+}
+
+.order-form textarea {
+    resize: vertical;
+}
+
+.submit-button {
+    display: block;
+    width: 100%;
+    text-align: center;
+    background-color: var(--accent-color);
+    color: var(--primary-color);
+    border: none;
+    padding: 1rem;
+    border-radius: 50px;
+    text-decoration: none;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    font-size: 1.2rem;
+}
+
+.submit-button:hover {
+    background-color: #E6B800;
+}
+
+/* --- Media Queries para Telas Pequenas --- */
+@media (max-width: 768px) {
+    .checkout-container {
+        padding: 1rem;
+    }
+
+    .checkout-main {
+        padding: 1.5rem;
+    }
+
+    h2 {
+        font-size: 1.5rem;
+    }
+
+    .order-total {
+        font-size: 1.2rem;
+    }
+}

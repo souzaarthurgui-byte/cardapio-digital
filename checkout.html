@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Checkout - Padaria [Nome da Padaria]</title>
+    <link rel="stylesheet" href="checkout.css">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&family=Playfair+Display:wght@700&display=swap" rel="stylesheet">
+</head>
+<body>
+
+    <header>
+        <h1 class="logo">Minha Padaria</h1>
+    </header>
+
+    <div class="checkout-container">
+        <main class="checkout-main">
+            <h2>Finalizar Pedido</h2>
+            <div class="order-summary">
+                <h3>Resumo do seu pedido</h3>
+                <ul id="summary-items">
+                    <li>Pão de Queijo (x1) - R$ 5,00</li>
+                    <li>Coxinha de Frango (x2) - R$ 17,00</li>
+                </ul>
+                <div class="order-total">
+                    <p>Total: R$ <span id="summary-total-price">22,00</span></p>
+                </div>
+            </div>
+
+            <form class="order-form">
+                <h3>Detalhes do Pedido</h3>
+                <div class="form-group">
+                    <label for="table-number">Número da Mesa</label>
+                    <input type="number" id="table-number" name="table-number" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="customer-name">Seu Nome (Opcional)</label>
+                    <input type="text" id="customer-name" name="customer-name">
+                </div>
+
+                <div class="form-group">
+                    <label for="notes">Observações</label>
+                    <textarea id="notes" name="notes" rows="4" placeholder="Ex: Maionese à parte, bolo sem calda, etc."></textarea>
+                </div>
+                
+                <button type="submit" class="submit-button">Confirmar Pedido</button>
+            </form>
+        </main>
+    </div>
+
+    <script src="checkout.js"></script>
+</body>
+</html>
