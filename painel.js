@@ -4,7 +4,7 @@ document.addEventListener('DOMContentLoaded', () => {
     const readyOrdersList = document.getElementById('ready-orders');
     const noOrdersMessage = document.getElementById('no-orders-message');
 
-    const serverURL = 'https://cardapio-digital-teal.vercel.app/';
+    const serverURL = 'https://cardapio-digital-teal.vercel.app';
 
     async function fetchOrders() {
         try {
