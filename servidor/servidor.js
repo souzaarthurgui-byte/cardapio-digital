@@ -1,19 +1,14 @@
 const express = require('express');
 const fs = require('fs');
 const path = require('path');
+const cors = require('cors');
 
 const app = express();
 const PORT = 3000;
 const ordersFilePath = path.join(__dirname, 'pedidos.json');
 
 app.use(express.json());
-
-app.use((req, res, next) => {
-  res.header('Access-Control-Allow-Origin', '*');
-  res.header('Access-Control-Allow-Headers', 'Origin, X-Requested-With, Content-Type, Accept');
-  res.header('Access-Control-Allow-Methods', 'GET, POST, PUT, DELETE, OPTIONS');
-  next();
-});
+app.use(cors());
 
 // Endpoint para receber e salvar um novo pedido
 app.post('/api/pedido', (req, res) => {
@@ -94,6 +89,7 @@ app.get('/api/pedidos', (req, res) => {
   });
 });
 
+// Serve os arquivos estáticos do cardápio
 app.use(express.static('../'));
 
 app.listen(PORT, () => {
