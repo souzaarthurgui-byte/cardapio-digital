@@ -89,9 +89,6 @@ app.get('/api/pedidos', (req, res) => {
   });
 });
 
-// Serve os arquivos estáticos do cardápio
-app.use(express.static('../'));
-
 app.listen(PORT, () => {
   console.log(`Servidor rodando em http://localhost:${PORT}`);
 });
