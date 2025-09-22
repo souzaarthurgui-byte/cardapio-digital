@@ -3,6 +3,8 @@ document.addEventListener('DOMContentLoaded', () => {
     const summaryTotal = document.getElementById('summary-total-price');
     const checkoutForm = document.querySelector('.order-form');
 
+    const serverURL = 'https://cardapio-digital-teal.vercel.app';
+
     const savedCart = localStorage.getItem('cart');
     const cartData = savedCart ? JSON.parse(savedCart) : [];
 
@@ -40,7 +42,7 @@ document.addEventListener('DOMContentLoaded', () => {
         };
 
         try {
-            const response = await fetch('http://192.168.1.12:3000/api/pedido', {
+            const response = await fetch(`${serverURL}/api/pedido`, {
                 method: 'POST',
                 headers: {
                     'Content-Type': 'application/json'
