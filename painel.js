@@ -4,8 +4,7 @@ document.addEventListener('DOMContentLoaded', () => {
     const readyOrdersList = document.getElementById('ready-orders');
     const noOrdersMessage = document.getElementById('no-orders-message');
 
-    const serverIP = '192.168.1.12';
-    const serverURL = `http://${serverIP}:3000`;
+    const serverURL = window.location.protocol + "//" + window.location.host;
 
     async function fetchOrders() {
         try {
